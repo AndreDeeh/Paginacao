@@ -1,7 +1,8 @@
 			<?php
 
 	//conexão com banco de dados
-	include "conexao.php";
+	mysql_connect('localhost', 'root', '') or die('Erro ao conectar com o servidor');
+	mysql_select_db('paginador') or die ('Erro ao selecionar o banco de dados');
 	
 	//pegando tipo de consulta: listagem ou contador
    	$tipo=$_GET['tipo'];
