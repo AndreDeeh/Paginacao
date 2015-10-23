@@ -1,5 +1,6 @@
 <?php
-include "menu.php";
+mysql_connect('localhost', 'root', '') or die('Erro ao conectar com o servidor');
+mysql_select_db('paginador') or die ('Erro ao selecionar o banco de dados');
 
 $buscar_cargo = mysql_query("SELECT idCargo, NomeCargo FROM CARGO WHERE StausCadastro = 0");
 ?>
